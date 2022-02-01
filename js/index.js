@@ -360,7 +360,7 @@ tippy('.tooltip-span-3', {
 
         var myPlacemark = new ymaps.Placemark([55.7603534958755,37.614680332768366], {}, {
             iconLayout: 'default#image',
-            iconImageHref: 'img/geotag.svg',
+            iconImageHref: './img/geotag.svg',
             iconImageSize: [20, 20],
             iconImageOffset: [-3, -42],
         });
