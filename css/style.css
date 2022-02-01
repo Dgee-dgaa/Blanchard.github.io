@@ -1281,6 +1281,10 @@ a.image-slider:focus {
     margin-top: -2px;
 }
 
+.catalog__art-link {
+    transition: .3s ease;
+}
+
 .catalog__years-name {
     display: flex;
     justify-content: space-between;
@@ -1328,6 +1332,7 @@ a.image-slider:focus {
     font-size: 24px;
     line-height: 1.33;
     font-weight: 600;
+    transition: .3s ease;   
 }
 
 .catalog__years-btn{
@@ -1338,6 +1343,10 @@ a.image-slider:focus {
     padding: 0;
     cursor: pointer;
     transition: .3s ease;
+}
+
+.catalog__years-btn svg {
+    transition: .5s ease;
 }
 
 .catalog__years-btn svg path:first-child {
@@ -1451,6 +1460,11 @@ a.image-slider:focus {
     background-color: transparent;
 }
 
+.catalog__years .ui-state-active,
+.catalog__years .ui-state-default {
+    transition: .3s ease;
+}
+
 .catalog__years .ui-state-active {
     border-radius: 0;
 }
@@ -1516,6 +1530,7 @@ a.image-slider:focus {
 .catalog .catalog__no-art-link {
     color: var(--purple);
     font-weight: 600;
+    transition: .3s ease;
 }
 
 .catalog__no-art-link:focus {
@@ -1685,6 +1700,7 @@ a.image-slider:focus {
     border: none;
     padding: 0;
     cursor: pointer;
+    transition: .3s ease;
 }
 
 .tooltip-span:hover svg,
@@ -1700,9 +1716,24 @@ a.image-slider:focus {
     fill: var(--white);
 }
 
-.tippy-tooltip {
+.tippy-box[data-theme~='purple'] {
     padding: 7px 0px 10px;
-    background: var(--purple);
+    background: var(--purple) !important;
+    color: #fff;
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 1.31;
+    font-weight: 600;
+    text-align: center;  
+}
+
+.tippy-box[data-theme~='purple'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: var(--purple);
+}
+
+/* .projects .tippy-tooltip {
+    padding: 7px 0px 10px;
+    background: var(--purple) !important;
     color: #fff;
     border-radius: 0;
     font-size: 12px;
@@ -1711,9 +1742,9 @@ a.image-slider:focus {
     text-align: center;   
 }
 
-.tippy-popper[x-placement^='top'] .tippy-tooltip.light-theme .tippy-arrow { 
-    border-top-color: var(--purple);
-}
+.projects .tippy-popper[x-placement^='top'] .tippy-tooltip.light-theme .tippy-arrow { 
+    border-top-color: var(--purple) !important;
+} */
 
 .projects__partners {
     display: flex;
@@ -1829,8 +1860,7 @@ a.image-slider:focus {
     height: 100%;
     padding: 43px 60px;
     border: 1px solid #cacaca;
-    transition: .3s ease;
-    
+    transition: .3s ease;    
     outline: none;
     text-decoration: none;
 }
@@ -1841,6 +1871,7 @@ a.image-slider:focus {
     max-height: 65px;
     filter: grayscale(100%);
     opacity: 0.5;
+    transition: .3s ease;
 }
 
 .projects__partners-link:hover.projects__partners-link>img,
@@ -1940,7 +1971,6 @@ a.image-slider:focus {
 .form-field:hover,
 .form-field:focus {
     background-color: #eaeaea !important;
-    border: none;
 }
 
 .form-field:active {
